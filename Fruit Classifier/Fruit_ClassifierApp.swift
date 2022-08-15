@@ -1,6 +1,6 @@
 //
-//  Fruit_ClassifierApp.swift
-//  Fruit Classifier
+// Fruit_Classifier swift
+// Fruit Classifier
 //
 //  Created by Jeffrey Zhou on 8/14/22.
 //

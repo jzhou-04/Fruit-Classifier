@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5EBDCAD728A9B6CF00831715 /* Fruit_ClassifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDCAD628A9B6CF00831715 /* Fruit_ClassifierApp.swift */; };
+		5EAF7A9D28A9F75100CA4711 /* FruitClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF7A9C28A9F75100CA4711 /* FruitClassifier.mlmodel */; };
 		5EBDCAD928A9B6CF00831715 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDCAD828A9B6CF00831715 /* ContentView.swift */; };
 		5EBDCADB28A9B6CF00831715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBDCADA28A9B6CF00831715 /* Assets.xcassets */; };
 		5EBDCADE28A9B6CF00831715 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBDCADD28A9B6CF00831715 /* Preview Assets.xcassets */; };
 		5EBDCAE828A9B6D000831715 /* Fruit_ClassifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDCAE728A9B6D000831715 /* Fruit_ClassifierTests.swift */; };
 		5EBDCAF228A9B6D000831715 /* Fruit_ClassifierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDCAF128A9B6D000831715 /* Fruit_ClassifierUITests.swift */; };
 		5EBDCAF428A9B6D000831715 /* Fruit_ClassifierUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDCAF328A9B6D000831715 /* Fruit_ClassifierUITestsLaunchTests.swift */; };
+		5EBDCB0528A9B78C00831715 /* Fruit_ClassifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDCB0428A9B78C00831715 /* Fruit_ClassifierApp.swift */; };
+		5EBDCB0828A9B88100831715 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDCB0728A9B88100831715 /* ImagePicker.swift */; };
+		5EBDCB0A28A9B89300831715 /* ImageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDCB0928A9B89300831715 /* ImageConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5EAF7A9C28A9F75100CA4711 /* FruitClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FruitClassifier.mlmodel; sourceTree = "<group>"; };
 		5EBDCAD328A9B6CF00831715 /* Fruit Classifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fruit Classifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EBDCAD628A9B6CF00831715 /* Fruit_ClassifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit_ClassifierApp.swift; sourceTree = "<group>"; };
 		5EBDCAD828A9B6CF00831715 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5EBDCADA28A9B6CF00831715 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EBDCADD28A9B6CF00831715 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -44,6 +47,9 @@
 		5EBDCAED28A9B6D000831715 /* Fruit ClassifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fruit ClassifierUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBDCAF128A9B6D000831715 /* Fruit_ClassifierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit_ClassifierUITests.swift; sourceTree = "<group>"; };
 		5EBDCAF328A9B6D000831715 /* Fruit_ClassifierUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit_ClassifierUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5EBDCB0428A9B78C00831715 /* Fruit_ClassifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit_ClassifierApp.swift; sourceTree = "<group>"; };
+		5EBDCB0728A9B88100831715 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		5EBDCB0928A9B89300831715 /* ImageConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				5EBDCAD528A9B6CF00831715 /* Fruit Classifier */,
+				5EBDCB0628A9B7CA00831715 /* Models */,
 				5EBDCAE628A9B6D000831715 /* Fruit ClassifierTests */,
 				5EBDCAF028A9B6D000831715 /* Fruit ClassifierUITests */,
 				5EBDCAD428A9B6CF00831715 /* Products */,
@@ -94,8 +101,10 @@
 		5EBDCAD528A9B6CF00831715 /* Fruit Classifier */ = {
 			isa = PBXGroup;
 			children = (
-				5EBDCAD628A9B6CF00831715 /* Fruit_ClassifierApp.swift */,
+				5EBDCB0428A9B78C00831715 /* Fruit_ClassifierApp.swift */,
 				5EBDCAD828A9B6CF00831715 /* ContentView.swift */,
+				5EBDCB0728A9B88100831715 /* ImagePicker.swift */,
+				5EBDCB0928A9B89300831715 /* ImageConverter.swift */,
 				5EBDCADA28A9B6CF00831715 /* Assets.xcassets */,
 				5EBDCADC28A9B6CF00831715 /* Preview Content */,
 			);
@@ -125,6 +134,14 @@
 				5EBDCAF328A9B6D000831715 /* Fruit_ClassifierUITestsLaunchTests.swift */,
 			);
 			path = "Fruit ClassifierUITests";
+			sourceTree = "<group>";
+		};
+		5EBDCB0628A9B7CA00831715 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5EAF7A9C28A9F75100CA4711 /* FruitClassifier.mlmodel */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EBDCB0828A9B88100831715 /* ImagePicker.swift in Sources */,
 				5EBDCAD928A9B6CF00831715 /* ContentView.swift in Sources */,
-				5EBDCAD728A9B6CF00831715 /* Fruit_ClassifierApp.swift in Sources */,
+				5EBDCB0A28A9B89300831715 /* ImageConverter.swift in Sources */,
+				5EAF7A9D28A9F75100CA4711 /* FruitClassifier.mlmodel in Sources */,
+				5EBDCB0528A9B78C00831715 /* Fruit_ClassifierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
