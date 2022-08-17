@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E6EC81828AC902800779FCD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6EC81728AC902800779FCD /* StringExtensions.swift */; };
 		5EAF7A9D28A9F75100CA4711 /* FruitClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF7A9C28A9F75100CA4711 /* FruitClassifier.mlmodel */; };
 		5EBDCAD928A9B6CF00831715 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDCAD828A9B6CF00831715 /* ContentView.swift */; };
 		5EBDCADB28A9B6CF00831715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBDCADA28A9B6CF00831715 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E6EC81728AC902800779FCD /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		5EAF7A9C28A9F75100CA4711 /* FruitClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FruitClassifier.mlmodel; sourceTree = "<group>"; };
 		5EBDCAD328A9B6CF00831715 /* Fruit Classifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fruit Classifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBDCAD828A9B6CF00831715 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				5EBDCAD828A9B6CF00831715 /* ContentView.swift */,
 				5EBDCB0728A9B88100831715 /* ImagePicker.swift */,
 				5EBDCB0928A9B89300831715 /* ImageConverter.swift */,
+				5E6EC81728AC902800779FCD /* StringExtensions.swift */,
 				5EBDCADA28A9B6CF00831715 /* Assets.xcassets */,
 				5EBDCADC28A9B6CF00831715 /* Preview Content */,
 			);
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6EC81828AC902800779FCD /* StringExtensions.swift in Sources */,
 				5EBDCB0828A9B88100831715 /* ImagePicker.swift in Sources */,
 				5EBDCAD928A9B6CF00831715 /* ContentView.swift in Sources */,
 				5EBDCB0A28A9B89300831715 /* ImageConverter.swift in Sources */,

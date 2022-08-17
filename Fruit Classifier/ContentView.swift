@@ -15,6 +15,7 @@ struct ContentView: View
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     @State private var predictionText = ""
+    @State private var secondaryPredictionText = ""
     
     var body: some View
     {
@@ -36,6 +37,12 @@ struct ContentView: View
                             .scaledToFit()
                     }
                     .onTapGesture(perform: selectImage)
+                    
+                    VStack
+                    {
+                        Text(secondaryPredictionText)
+                            .padding([.bottom])
+                    }
                 }
                 .padding([.horizontal, .bottom])
                 .onChange(of: inputImage){ _ in loadImage() }
@@ -70,13 +77,34 @@ struct ContentView: View
             let convertedImage = resizedImage?.convertToBuffer()
             let prediction = try model.prediction(image: convertedImage!)
             let predictionClass = prediction.classLabel
-            let confidence = String(format: "%.2f", prediction.classLabelProbs[predictionClass]! * 100)
-            predictionText = predictionClass + ": " + confidence + "%"
+            var predictionProbs = prediction.classLabelProbs
+            let confidence = String(format: "%.2f", predictionProbs[predictionClass]! * 100)
+            predictionText = predictionClass.capitalizingFirstLetter() + ": " + confidence + "%"
+            predictionProbs.removeValue(forKey: predictionClass)
+            printSecondaryGuesses(predictions: predictionProbs)
         }
         catch
         {
             predictionText = "Failed to load model"
         }
+    }
+    
+    func printSecondaryGuesses(predictions: Dictionary<String, Double>)
+    {
+        var predictionProbs = predictions
+        let secondGuess = predictionProbs.max {$0.value < $1.value}
+        predictionProbs.removeValue(forKey: secondGuess!.key)
+        let secondGuessClass = secondGuess!.key
+        var confidence = String(format: "%.2f", secondGuess!.value * 100)
+        let secondGuessText = secondGuessClass + ": " + confidence + "%"
+        
+        let thirdGuess = predictionProbs.max {$0.value < $1.value}
+        predictionProbs.removeValue(forKey: thirdGuess!.key)
+        let thirdGuessClass = thirdGuess!.key
+        confidence = String(format: "%.2f", thirdGuess!.value * 100)
+        let thirdGuessText = thirdGuessClass + ": " + confidence + "%"
+        
+        secondaryPredictionText = secondGuessText.capitalizingFirstLetter() + "   |   " + thirdGuessText.capitalizingFirstLetter()
     }
 }
 
